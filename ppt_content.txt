@@ -1,0 +1,152 @@
+﻿--- Slide 1 ---
+DATABASE SYSTEMS ENGINEERING & DISTRIBUTED BACKEND DEVELOPMENT
+Real Estate Listing &
+Virtual Tour Portal
+A normalized, distributed-backend platform connecting property buyers and sellers through searchable listings and immersive 360┬░ virtual tours.
+Course: 25CS1302E   |   Trimester 4, Y25 (2026-2027)
+Team: [Team No.]   |   Guide: [Guide Name]
+
+--- Slide 2 ---
+THE PROBLEM
+Fragmented data slows real estate search
+Redundant, unnormalized data
+Listing sites often duplicate property, agent, and media data across tables, wasting storage and risking inconsistency.
+Slow, inconsistent search results
+Without proper indexing and schema design, filtered searches by location, price, or type degrade as the catalogue grows.
+No support for rich media
+Photos and 360┬░ virtual tour files are rarely modeled cleanly alongside relational listing data.
+Poor concurrency handling
+Simultaneous bookings, edits, and searches from many users can overload a single, non-distributed backend.
+Real Estate Listing & Virtual Tour Portal
+2
+
+--- Slide 3 ---
+PROPOSED SOLUTION
+A database-driven portal built for scale
+A relational schema normalized to 3NF, paired with a distributed backend, lets buyers search verified listings and take immersive virtual tours ΓÇö while the system stays fast and consistent under real-world load.
+Verified Listings
+Rich property records with structured attributes for accurate, filterable search.
+Virtual Tours
+360┬░ walkthroughs linked to listings via a hybrid media storage model.
+Role-Based Access
+Separate, secure flows for buyers, sellers, and agents.
+Distributed Backend
+Pooled connections, caching, and replication keep the system responsive.
+Real Estate Listing & Virtual Tour Portal
+3
+
+--- Slide 4 ---
+DATABASE DESIGN
+Relational schema, normalized to 3NF
+Users
+Buyers, sellers, agents
+Properties
+Core listing attributes
+Agents
+Agent profiles & assignments
+Media
+Photos & 360┬░ tour assets
+Bookings
+Site-visit scheduling
+Reviews
+Ratings & feedback
+Transactions
+Payments & deal records
+Linked by Foreign Keys
+Real Estate Listing & Virtual Tour Portal
+4
+
+--- Slide 5 ---
+SYSTEM ARCHITECTURE
+Distributed backend, built for concurrency
+Client Apps
+Web & mobile UI
+ΓåÆ
+REST API Layer
+Node.js + Express
+ΓåÆ
+Cache Layer
+Redis
+ΓåÆ
+Relational DB
+MySQL / PostgreSQL
+Object Storage ΓÇö media files (S3)
+Connection pooling smooths concurrent read/write spikes
+Redis caching layer reduces repeated-query load on the DB
+Replication keeps listings available during peak traffic
+Real Estate Listing & Virtual Tour Portal
+5
+
+--- Slide 6 ---
+KEY FEATURES
+What the platform delivers
+Advanced Filtered Search
+Indexed queries by location, price range, property type, and amenities.
+360┬░ Virtual Tours
+Immersive walkthroughs rendered via Three.js / Pannellum.
+Role-Based Access Control
+Distinct, secure permissions for buyers, sellers, and agents.
+Booking & Scheduling
+Transaction-managed site-visit bookings with conflict handling.
+Ratings & Reviews
+Structured feedback tied to properties and agents.
+High Availability
+Replication strategies keep the portal online under load.
+Real Estate Listing & Virtual Tour Portal
+6
+
+--- Slide 7 ---
+TECHNOLOGY STACK
+Frameworks, platforms & tools
+Database
+MySQL / PostgreSQL
+Redis (caching)
+Backend
+Node.js + Express.js
+REST APIs
+JWT authentication
+Frontend
+React.js
+Storage & Media
+AWS S3 / Cloudinary
+Three.js / Pannellum (360┬░ tours)
+DevOps & Tooling
+Docker
+Postman
+Real Estate Listing & Virtual Tour Portal
+7
+
+--- Slide 8 ---
+PERFORMANCE & SCALABILITY
+Designed to hold up under real usage
+3NF
+Schema Normalization
+Eliminates redundant data & update anomalies
+Hybrid
+Media Storage Model
+Metadata in DB, files in object storage
+Pooled
+Connections
+Handles concurrent read/write efficiently
+Replicated
+Availability
+Keeps listings online at peak traffic
+Real Estate Listing & Virtual Tour Portal
+8
+
+--- Slide 9 ---
+EXPECTED OUTCOME
+A scalable, consistent real estate portal
+The final system will demonstrate practical application of database normalization, indexing, transaction control, and distributed backend design ΓÇö delivered as a working portal where buyers can search, tour, and book properties reliably at scale.
+Normalized, consistent relational schema
+Fast, indexed, filterable property search
+Seamless 360┬░ virtual tour integration
+Resilient backend under concurrent load
+Real Estate Listing & Virtual Tour Portal
+9
+
+--- Slide 10 ---
+Thank You
+Questions & Discussion
+Real Estate Listing & Virtual Tour Portal  ΓÇö  25CS1302E
+
